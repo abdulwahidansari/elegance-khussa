@@ -10,8 +10,10 @@ export const site = {
     phone: "[PLACEHOLDER: phone / WhatsApp]",
     address: "[PLACEHOLDER: business address]",
   },
-  delivery: "[PLACEHOLDER: delivery time and fee]",
-  returns: "[PLACEHOLDER: exchange and return window]",
+  delivery:
+    "We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with tracking information and further details. Delivery times may vary depending on your location.",
+  returns:
+    "We want all our customers to be 100% satisfied with their purchases. If you're not completely happy with your order, please let us know, and we'll do our best to make things right.",
 };
 
 // Shown in the top bar and footer. Edit freely.

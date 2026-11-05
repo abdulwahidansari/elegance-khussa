@@ -36,9 +36,9 @@ export function Header() {
   return (
     <>
       <div className="bg-brown text-ivory">
-        <div className="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-2 text-sm">
-          <Socials className="justify-start" size={16} />
-          <p className="col-start-2 text-center">{announcement}</p>
+        <div className="mx-auto grid max-w-6xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-2 gap-y-1 px-3 py-2 text-xs sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:px-4 sm:text-sm">
+          <Socials className="justify-start" iconClassName="size-3.5 min-[380px]:size-4 sm:size-[18px]" />
+          <p className="min-w-0 text-center leading-snug sm:col-start-2">{announcement}</p>
           <p className="hidden justify-self-end sm:block">Pakistan (PKR Rs)</p>
         </div>
       </div>

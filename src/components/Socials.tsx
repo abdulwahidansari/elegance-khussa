@@ -2,8 +2,8 @@ import { social } from "@/lib/site";
 
 const BG = "var(--color-brown)"; // cut-out colour; the footer and top bar are both brown
 
-function Icon({ name, size }: { name: string; size: number }) {
-  const common = { width: size, height: size, viewBox: "0 0 24 24", "aria-hidden": true as const, focusable: false as const };
+function Icon({ name, className }: { name: string; className: string }) {
+  const common = { className, viewBox: "0 0 24 24", "aria-hidden": true as const, focusable: false as const };
   switch (name) {
     case "Instagram":
       return (
@@ -39,17 +39,17 @@ function Icon({ name, size }: { name: string; size: number }) {
 }
 
 /** Icons always show. An entry with no URL in src/lib/site.ts renders as an inert icon (not a link). */
-export function Socials({ className = "", size = 20 }: { className?: string; size?: number }) {
+export function Socials({ className = "", iconClassName = "size-4 sm:size-5" }: { className?: string; iconClassName?: string }) {
   return (
-    <ul className={`flex items-center gap-4 ${className}`}>
+    <ul className={`flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 ${className}`}>
       {Object.entries(social).map(([name, url]) => (
-        <li key={name}>
+        <li key={name} className="shrink-0">
           {url ? (
             <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name} className="block transition-opacity duration-150 hover:opacity-70">
-              <Icon name={name} size={size} />
+              <Icon name={name} className={iconClassName} />
             </a>
           ) : (
-            <span aria-hidden className="block opacity-80"><Icon name={name} size={size} /></span>
+            <span aria-hidden className="block opacity-80"><Icon name={name} className={iconClassName} /></span>
           )}
         </li>
       ))}
