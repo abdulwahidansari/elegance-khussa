@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { site, footerBlurb } from "@/lib/site";
 import { mainNav } from "@/lib/nav";
+import { Newsletter } from "./Newsletter";
 import { Socials } from "./Socials";
 
 const cols: { title: string; links: [string, string][] }[] = [
@@ -31,14 +31,7 @@ export function Footer() {
           </div>
           <div>
             <h2 className="font-display text-2xl">Get new arrivals by email</h2>
-            <form aria-describedby="nl-note" className="mt-3 flex items-center rounded-full border border-ivory/30 p-1.5 pl-5">
-              <label htmlFor="nl-email" className="sr-only">Email address</label>
-              <input id="nl-email" type="email" disabled placeholder="Email address" className="w-full bg-transparent text-sm placeholder:text-ivory/50 disabled:cursor-not-allowed" />
-              <button type="submit" disabled aria-label="Subscribe" className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ivory text-brown disabled:opacity-50">
-                <ArrowRight size={16} aria-hidden />
-              </button>
-            </form>
-            <p id="nl-note" className="mt-2 text-xs text-ivory/60">Email signup is not connected yet.</p>
+            <Newsletter />
           </div>
         </div>
 

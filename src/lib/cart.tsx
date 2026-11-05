@@ -6,6 +6,7 @@ type Action =
   | { type: "add"; slug: string; size: number }
   | { type: "setQty"; slug: string; size: number; qty: number }
   | { type: "remove"; slug: string; size: number }
+  | { type: "clear" }
   | { type: "load"; lines: Line[] };
 
 const same = (a: Line, slug: string, size: number) => a.slug === slug && a.size === size;
@@ -20,6 +21,7 @@ function reducer(state: Line[], a: Action): Line[] {
     case "setQty":
       return state.map((l) => (same(l, a.slug, a.size) ? { ...l, qty: Math.max(1, a.qty) } : l));
     case "remove": return state.filter((l) => !same(l, a.slug, a.size));
+    case "clear": return [];
   }
 }
 

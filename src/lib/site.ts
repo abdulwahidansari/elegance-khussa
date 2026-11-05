@@ -6,9 +6,9 @@ export const site = {
   description:
     "Embroidered, bridal and everyday Pakistani khussa for women. A curated collection of traditional footwear.",
   contact: {
-    email: "[PLACEHOLDER: support email]",
-    phone: "[PLACEHOLDER: phone / WhatsApp]",
-    address: "[PLACEHOLDER: business address]",
+    email: "hello@theelegancekhussa.store",
+    phone: "",
+    address: "Pakistan",
   },
   delivery:
     "We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with tracking information and further details. Delivery times may vary depending on your location.",
@@ -19,7 +19,12 @@ export const site = {
 // Shown in the top bar and footer. Edit freely.
 export const announcement = "Pakistani khussa for weddings, festive days and every day";
 export const footerBlurb = "Traditional Pakistani khussa for weddings, festive days and everyday wear.";
-// Add real URLs to show social links. Empty entries are hidden, so nothing is a dead link.
-export const social: Record<string, string> = { Instagram: "", Facebook: "", TikTok: "", YouTube: "" };
+// Profile links used by the header and footer icons. Replace a URL if the real handle is different.
+export const social: Record<string, string> = {
+  Instagram: "https://www.instagram.com/theelegancekhussa/",
+  Facebook: "https://www.facebook.com/theelegancekhussa",
+  TikTok: "https://www.tiktok.com/@theelegancekhussa",
+  YouTube: "https://www.youtube.com/@theelegancekhussa",
+};
 
 export const money = (n: number) => `Rs. ${n.toLocaleString("en-PK")}`;

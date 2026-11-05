@@ -38,19 +38,21 @@ function Icon({ name, className }: { name: string; className: string }) {
   }
 }
 
-/** Icons always show. An entry with no URL in src/lib/site.ts renders as an inert icon (not a link). */
+/** Icons in the header and footer. Each one opens that profile in a new tab and turns gold on hover. */
 export function Socials({ className = "", iconClassName = "size-4 sm:size-5" }: { className?: string; iconClassName?: string }) {
   return (
     <ul className={`flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 ${className}`}>
       {Object.entries(social).map(([name, url]) => (
         <li key={name} className="shrink-0">
-          {url ? (
-            <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name} className="block transition-opacity duration-150 hover:opacity-70">
-              <Icon name={name} className={iconClassName} />
-            </a>
-          ) : (
-            <span aria-hidden className="block opacity-80"><Icon name={name} className={iconClassName} /></span>
-          )}
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={name}
+            className="block text-current transition-colors duration-200 hover:text-gold focus-visible:text-gold"
+          >
+            <Icon name={name} className={iconClassName} />
+          </a>
         </li>
       ))}
     </ul>
