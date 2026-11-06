@@ -54,7 +54,7 @@ export default async function ProductPage({ params }: Props) {
       {related.length > 0 && (<section className="mt-16"><h2 className="mb-6 text-3xl">You may also like</h2><ProductGrid items={related} /></section>)}
       <JsonLd data={{
         "@context": "https://schema.org", "@type": "Product", name: p.name, description: p.description,
-        url: `${site.url}/products/${p.slug}`,
+        url: `${site.url}/products/${p.slug}`, image: `${site.url}/images/khussa-sample.svg`,
         offers: { "@type": "Offer", priceCurrency: "PKR", price: p.price, availability: "https://schema.org/InStock" },
       }} />
     </>

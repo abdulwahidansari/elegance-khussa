@@ -43,11 +43,11 @@ export function Header() {
         </div>
       </div>
       <header className="sticky top-0 z-40 border-b border-brown/10 bg-ivory">
-        <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-6 px-4">
+        <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-4 lg:gap-6">
           <MobileMenu />
-          <Link href="/" className="whitespace-nowrap py-4 font-display text-2xl md:text-[26px]">{site.name}</Link>
-          <nav aria-label="Main" className="hidden md:block">
-            <ul className="flex items-center gap-7">
+          <Link href="/" className="min-w-0 truncate py-3 font-display text-xl min-[400px]:text-2xl sm:py-4 lg:text-[26px]">{site.name}</Link>
+          <nav aria-label="Main" className="hidden lg:block">
+            <ul className="flex items-center gap-4 xl:gap-7">
               {mainNav.map((i) => <Item key={i.href} item={i} />)}
               <Item item={{ label: "More", href: "#", children: moreNav }} trigger="button" />
             </ul>

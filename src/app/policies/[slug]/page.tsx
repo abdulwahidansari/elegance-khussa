@@ -24,6 +24,7 @@ const policies: Record<string, { title: string; paragraphs: string[] }> = {
     paragraphs: [
       "We collect the name, phone number, delivery address and email you give us at checkout or on the contact form. We use that information to deliver your order and to reply to you.",
       "We do not sell your details. Payment for cash-on-delivery orders is collected by the courier when the parcel arrives, so we do not store card numbers.",
+      "A cookie keeps the cart in this browser. Analytics, Meta, Google Ads, Tag Manager and optional AdSense cookies run only after you accept them. You can choose essential cookies only. Search Console is used to see how the site appears in Google, and it does not follow you around the shop.",
       `Questions about your information can be sent to ${site.contact.email}.`,
     ],
   },

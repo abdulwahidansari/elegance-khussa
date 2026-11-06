@@ -9,7 +9,7 @@ const items = [
 
 export function TrustStrip() {
   return (
-    <ul className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+    <ul className="mt-4 grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:grid-cols-4">
       {items.map(({ Icon, title, note }) => (
         <li key={title} className="rounded-2xl bg-sand px-4 py-7 text-center">
           <Icon size={28} strokeWidth={1.5} aria-hidden className="mx-auto text-brown" />

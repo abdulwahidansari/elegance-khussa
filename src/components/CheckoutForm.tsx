@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import { getProduct } from "@/lib/data";
 import { money } from "@/lib/site";
+import { trackPurchase } from "@/lib/tracking";
 
 export function CheckoutForm() {
   const { lines, dispatch } = useCart();
@@ -39,6 +40,7 @@ export function CheckoutForm() {
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    trackPurchase(total);
     dispatch({ type: "clear" });
     setPlaced(true);
   }
