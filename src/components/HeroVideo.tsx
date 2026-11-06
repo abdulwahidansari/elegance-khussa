@@ -4,12 +4,11 @@
  * HTML response so the browser can start it without waiting for JavaScript.
  * Reduced motion hides the video and keeps the brand gradient.
  */
-export function HeroVideo({ src, poster }: { src: string; poster?: string }) {
+export function HeroVideo({ src }: { src: string }) {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden bg-gradient-to-br from-champagne via-sand to-ivory" aria-hidden>
       <video
         className="hero-video h-full w-full object-cover"
-        poster={poster}
         autoPlay
         muted
         loop

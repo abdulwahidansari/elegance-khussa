@@ -9,7 +9,7 @@ export function Hero() {
       aria-labelledby="hero-title"
       className="relative left-1/2 -mt-6 flex min-h-[70svh] w-screen max-w-[100vw] -translate-x-1/2 items-end overflow-hidden text-ivory sm:-mt-10 sm:min-h-[88svh]"
     >
-      <HeroVideo src="/videos/khussa1.mp4" poster="/images/khussa-sample.svg" />
+      <HeroVideo src="/videos/khussa1.mp4" />
       <div className="mx-auto w-full max-w-6xl px-4 pb-10 sm:pb-14 md:pb-20">
         <h1 id="hero-title" className="hero-rise max-w-3xl text-4xl leading-[1.05] sm:text-5xl md:text-7xl lg:text-8xl">
           Khussa for the days you remember.
