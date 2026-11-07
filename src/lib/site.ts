@@ -11,9 +11,9 @@ export const site = {
     address: "Pakistan",
   },
   delivery:
-    "We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with tracking information and further details. Delivery times may vary depending on your location.",
+    "Delivery time and shipping cost depend on your location. We confirm both with you by phone before your order is dispatched.",
   returns:
-    "We want all our customers to be 100% satisfied with their purchases. If you're not completely happy with your order, please let us know, and we'll do our best to make things right.",
+    "To ask about an exchange or return, contact us with your order details and we will tell you the next step.",
 };
 
 // Shown in the top bar and footer. Edit freely.

@@ -13,13 +13,16 @@ npm run build
 Dependencies are set to `latest`; after the first successful install, pin the versions in package.json.
 
 ## What exists
-Home, shop, collection, product, new arrivals, best sellers, cart (browser localStorage), about, contact, FAQ,
-policy pages, 404, sitemap.xml, robots.txt, metadata and canonical URLs, Organization / Product /
-Breadcrumb / FAQ JSON-LD.
+Home (video hero, shop-by-style, FAQ, trust strip), shop, collections, product pages, new arrivals, best sellers, search,
+cart (browser localStorage), cash-on-delivery checkout that submits to `/api/orders`, newsletter signup (`/api/subscribe`),
+contact form (opens the visitor's email app), about, FAQ, policy pages, 404, sitemap.xml, robots.txt, metadata and canonical URLs,
+Organization / Product / Breadcrumb / FAQ JSON-LD.
+
+Orders and signups go to `FORMS_WEBHOOK_URL` (see `docs/forms-webhook.md`). Without it they show an honest "not switched on" message.
 
 ## What does NOT exist yet
-Checkout and orders, payments, customer accounts, wishlist, order tracking, search, filters and sorting,
-discount codes, newsletter, reviews, recently viewed, real database, admin, Google Analytics, real images.
+Payment gateways, customer accounts, wishlist, order tracking, filters and sorting, discount codes, reviews,
+recently viewed, a real database, an admin area, Google Analytics, real product photos.
 
 ## Rules built in
 - All catalog data in `src/lib/data.ts` is SAMPLE data (`isMock: true`). Mock product pages are `noindex`

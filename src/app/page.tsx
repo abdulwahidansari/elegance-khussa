@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { products } from "@/lib/data";
 import { mainNav } from "@/lib/nav";
@@ -5,6 +6,18 @@ import { ProductGrid } from "@/components/ProductGrid";
 import { Hero } from "@/components/Hero";
 import { FaqSection } from "@/components/FaqSection";
 import { TrustStrip } from "@/components/TrustStrip";
+
+const title = "Handmade Pakistani Khussa for Women | The Elegance Khussa";
+const description =
+  "Shop handmade Pakistani khussa for women: bridal, embroidered and everyday styles in traditional footwear for weddings, Eid and special occasions.";
+
+export const metadata: Metadata = {
+  title: { absolute: title },
+  description,
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", title, description, url: "/", siteName: "The Elegance Khussa" },
+  twitter: { card: "summary_large_image", title, description },
+};
 
 export default function Home() {
   return (

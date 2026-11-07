@@ -11,7 +11,7 @@ export function MobileMenu() {
   useEffect(() => setOpen(false), [path]);
 
   return (
-    <div className="lg:hidden">
+    <div className="md:hidden">
       <button type="button" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((o) => !o)} className="-ml-2 p-2">
         {open ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}

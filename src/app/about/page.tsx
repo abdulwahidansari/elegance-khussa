@@ -11,10 +11,10 @@ export default function About() {
         The Elegance Khussa is an online store for traditional Pakistani footwear: bridal, embroidered and everyday khussa, made to be worn and kept.
       </p>
       <p className="mt-4">
-        Our products are manufactured both locally and internationally. We carefully select our manufacturing partners so the pairs meet our quality standards and offer fair value.
+        Our khussa are handmade, and the range runs from heavily worked bridal pairs to simple styles for daily wear.
       </p>
       <p className="mt-4">
-        Shipping cost is shown before you complete a purchase, and you receive a tracking email once an order has shipped. Delivery time depends on your location. If you are not completely happy with an order, contact us and we will do our best to make it right. Items marked final sale cannot be returned.
+        Delivery time and shipping cost depend on your location, and we confirm both with you by phone before dispatch. Payment is cash on delivery. If you want to ask about an exchange or return, contact us with your order details.
       </p>
       <p className="mt-6">
         <Link href="/shop" className="underline underline-offset-4">Shop all khussa</Link>

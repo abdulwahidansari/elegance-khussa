@@ -1,25 +1,32 @@
 import Link from "next/link";
-import { preload } from "react-dom";
 import { HeroVideo } from "./HeroVideo";
 
 export function Hero() {
-  preload("/videos/khussa1.mp4", { as: "video", fetchPriority: "high" });
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative left-1/2 -mt-6 flex min-h-[70svh] w-screen max-w-[100vw] -translate-x-1/2 items-end overflow-hidden text-ivory sm:-mt-10 sm:min-h-[88svh]"
+      className="relative left-1/2 -mt-10 w-screen -translate-x-1/2 overflow-hidden bg-ivory text-brown md:flex md:min-h-[82svh] md:items-center"
     >
-      <HeroVideo src="/videos/khussa1.mp4" />
-      <div className="mx-auto w-full max-w-6xl px-4 pb-10 sm:pb-14 md:pb-20">
-        <h1 id="hero-title" className="hero-rise max-w-3xl text-4xl leading-[1.05] sm:text-5xl md:text-7xl lg:text-8xl">
-          Khussa for the days you remember.
-        </h1>
-        <p className="hero-rise mt-5 max-w-md text-base text-ivory/90 md:text-lg" style={{ animationDelay: "40ms" }}>
-          Bridal, embroidered and everyday Pakistani khussa, with sizing and delivery details on every page.
-        </p>
-        <div className="hero-rise mt-8 flex flex-col gap-3 min-[420px]:flex-row min-[420px]:flex-wrap" style={{ animationDelay: "80ms" }}>
-          <Link href="/shop" className="bg-ivory px-8 py-3 text-center text-brown transition-transform duration-300 hover:-translate-y-0.5">Shop all khussa</Link>
-          <Link href="/collections/bridal-khussa" className="border border-ivory/70 px-8 py-3 text-center transition-colors duration-300 hover:bg-ivory/10">Bridal khussa</Link>
+      <HeroVideo
+        src="/videos/khussa1.mp4"
+        poster="/videos/khussa1-poster.jpg"
+        alt="Pair of cream khussa with gold bead and pearl embroidery"
+      />
+      {/* The footage is a light studio shot, so the text sits on an ivory fade instead of a dark overlay. */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-ivory from-0% via-ivory/85 via-35% to-transparent to-62% md:block" />
+
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-10 md:py-24">
+        <div className="md:max-w-[34rem]">
+          <h1 id="hero-title" className="hero-rise text-5xl leading-[1.04] md:text-6xl lg:text-7xl" style={{ animationDelay: "100ms" }}>
+            Pakistani Khussa for Brides and Beyond
+          </h1>
+          <p className="hero-rise mt-5 max-w-md text-base text-brown-soft md:text-lg" style={{ animationDelay: "250ms" }}>
+            Explore handmade bridal, embroidered and everyday khussa for women, traditional Pakistani footwear for weddings, Eid and special occasions, all in one collection.
+          </p>
+          <div className="hero-rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "400ms" }}>
+            <Link href="/shop" className="bg-brown px-8 py-3 text-ivory transition-transform duration-300 hover:-translate-y-0.5">Shop All Khussa</Link>
+            <Link href="/collections/bridal-khussa" className="border border-brown/60 px-8 py-3 transition-colors duration-300 hover:bg-brown/5">Explore Bridal Khussa</Link>
+          </div>
         </div>
       </div>
     </section>
